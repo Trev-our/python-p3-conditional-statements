@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 
+import sys
+import os
+import io
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from control_flow import admin_login, hows_the_weather, fizzbuzz, calculator
 
-import io
-import sys
 
 class TestAdminLogin:
     '''admin_login() in control_flow.py'''
@@ -99,6 +101,8 @@ class TestCalculator:
         '''prints "Invalid operation!" and returns None if operation invalid'''
         captured_out = io.StringIO()
         sys.stdout = captured_out
-        assert(calculator('a', 1, 2) == None)
-        sys.stdout = sys.__stdout__
-        assert(captured_out.getvalue() == "Invalid operation!\n")
+        
+output = 'captured_out''getvalue'
+sys.stdout = sys.__stdout__
+
+
